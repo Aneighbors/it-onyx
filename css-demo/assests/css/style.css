@@ -1,0 +1,64 @@
+/* ---------------Box Sizing----------------- */
+
+html {
+    box-sizing: border-box;
+  }
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+body {
+    background-color: #f27405;
+    font-family: 'Archivo', sans-serif;
+}
+/*
+long hand: 
+Margin-top: 40px;
+margin-right: 40px;
+margin-bottom: 40px;
+margin-left: 40px;
+
+Shorthand
+margin:40px;
+
+shorthand: Top- Right - Bottom- Left 
+margin 40px, 10px, 30px, 15px;
+
+Two Value Shorthand top/bottom, left/right
+margin:40px auto;
+
+*/
+main{
+    background-color: #03A6A6;
+    width:80vw;
+    max-width:1140px;
+    margin:40px auto;
+    border:2px solid #F24405;
+    border-radius:4px;
+}
+header.primary{
+background-color: #594b3f;
+padding:20px;
+background-image: url("../img/dog-beach.jpeg");
+background-repeat: no-repeat;
+background-size:cover;
+}
+
+.hgroup h1, .hgroup h2{
+    margin:0;
+}
+
+.hgroup h1 a{
+color:#F24405;
+text-shadow: 1px 1px #000000;
+font-size: 3rem;
+text-decoration: none;
+
+}
+
+.hgroup h2{
+color:#594b3f;
+text-shadow: 1px 1px #000000;
+font-size: 2.5rem;
+}
