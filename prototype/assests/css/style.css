@@ -1,0 +1,14 @@
+/* ---------------Box Sizing----------------- */
+
+html {
+    box-sizing: border-box;
+  }
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+body {
+    background-color:#03A6A6;
+    font-family: 'Archivo', sans-serif;
+}
