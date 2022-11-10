@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="assests/css/style.css" rel="stylesheet">
+<title>Page Title</title>
+</head>
+<body>
+    <h1>New Patient Registration</h1>
+    <p>Please fill out the form below</p>
+    <form id="SubmitPatientForm" action="https://brucebauer.info/assets/ITEC3650/datadump.php"> 
+        
+        <label for="FirstName">First Name: </label> 
+        
+        <input type="text" id="FirstName" name="FirstName" size="30" maxlength="30"> <br>
+        
+        <label for="MiddleInitial">Middle Initial: </label> 
+        
+        <input type="text" id="MiddleInitial" name="MiddleInitial" size="1" maxlength="1"> <br>
+        
+        <label for="LastName">Last Name: </label> 
+        
+        <input type="text" id="LastName" name="LastName" size="30" maxlength="30"> <br>
+        
+        <label>Sex: </label> 
+        
+        <label for="Male"><input type="radio" name="Sex" id="Male" value="M">Male</label> 
+        
+        <label for="Female"><input type="radio" name="Sex" id="Female" value="F">Female</label> 
+        
+        <label for="N/A"><input type="radio" name="Sex" id="N/A" value="N">N/A</label> <br>
+        
+        <label for=”Birthday">Birthday </label> 
+        
+        <input type="text" id=”Birthday" name="Birthday" size="8" maxlength="8"> <br>
+        
+        <label for="Height">Heigh (inches)t: </label> 
+        
+        <input type="text" id="Height" name="Height" size="3" maxlength="3"> <br>
+        
+        <label for="Weight">Weight (pounds): </label> 
+        
+        <input type="text" id="Weight" name="Weight" size="3" maxlength="3"> <br>
+    
+        
+        <label for="PhoneNumber">Phone Number: </label> 
+        
+        <input type="text" id="PhoneNumber" name="PhoneNumber" size="14" maxlength="14"> <br>
+        
+        <label>Marital Status: </label> 
+        
+        <select name="MaritalStatus" id=""> 
+        
+            <option value="">Select an Auto...</option> 
+        
+            <option value="Volvo">Volvo (Latin for 'I roll')</option> 
+        
+            <option value="Saab">Saab (Swedish Aeroplane AB)</option> 
+        
+            <option value="Mercedes (Mercedes-Benz">Mercedes (Mercedes-Benz)</option> 
+        
+            <option value="Audi">Audi (Auto Union Deutschland Ingolstadt)</option> 
+        
+        </select> 
+        
+        <input type="submit" value="SubmitExample" Name="SubmitButton"> 
+        
+        </form>
+
+</body>
+</html>
