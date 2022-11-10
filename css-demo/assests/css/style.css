@@ -12,6 +12,12 @@ body {
     background-color: #f27405;
     font-family: 'Archivo', sans-serif;
 }
+
+.container{
+margin:auto;
+padding: 40px;
+
+}
 /*
 long hand: 
 Margin-top: 40px;
@@ -43,6 +49,16 @@ padding:20px;
 background-image: url("../img/dog-beach.jpeg");
 background-repeat: no-repeat;
 background-size:cover;
+display:flex;
+flex-direction: row;
+}
+
+header.primary .hgroup{
+  width:70%;
+}
+
+header.primary nav{
+  width:30%;
 }
 
 .hgroup h1, .hgroup h2{
@@ -61,4 +77,47 @@ text-decoration: none;
 color:#594b3f;
 text-shadow: 1px 1px #000000;
 font-size: 2.5rem;
+}
+
+header.primary nav ul{
+  list-style-type: none;
+  padding:0;
+
+}
+
+header.primary nav a{
+  display:block;
+  text-decoration: none;
+  background-color: #F24405;
+  color:white;
+  padding: 10px 10px 10px 0;
+  border: 1px solid #594b3f;
+  margin-bottom: 10px;
+  border-radius: 20%;
+  text-align: right;
+  padding: 10px;
+}
+
+header.primary nav a:hoover{
+  transition: .75s;
+  background-color: #F24405;
+}
+
+#content {
+  line-height :1.0;
+}
+
+#content h2, #content h3{
+  color:#594b3f; 
+  border-left: 7.5px solid #F24405;
+  padding: 5px;
+  border-radius: 20%;
+}
+.img-right{
+  float:right;
+  border: 2px solid #F24405;
+  padding:5px;
+  border-radius: 20%;
+  max-width: calc(50%-20px);
+  margin: 20px 0 20px 20px;
 }
