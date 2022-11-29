@@ -12,46 +12,49 @@
     <p>Please fill out the form below</p>
     <form id="SubmitPatientForm" action="https://brucebauer.info/assets/ITEC3650/datadump.php"> 
         
-        <label for="FirstName">First Name: </label> 
+        <label for="FirstName" class="formlabel">First Name: </label> 
         
-        <input type="text" id="FirstName" name="FirstName" size="30" maxlength="30"> <br>
         
-        <label for="MiddleInitial">Middle Initial: </label> 
+        <input type="text" id="FirstName" name="FirstName" size="30" maxlength="30" data-rule-required="true"  data-msg-required="First Name is Required" > <br>
+        
+        <label for="MiddleInitial" class="formlabel">Middle Initial: </label> 
         
         <input type="text" id="MiddleInitial" name="MiddleInitial" size="1" maxlength="1"> <br>
         
-        <label for="LastName">Last Name: </label> 
+        <label for="LastName" class="formlabel">Last Name: </label> 
         
-        <input type="text" id="LastName" name="LastName" size="30" maxlength="30"> <br>
+        <input type="text" id="LastName" name="LastName" size="30" maxlength="30" data-rule-required="true"  data-msg-required="Last Name is Required" > <br>
+        <label for="Email" class="formlabel">Email: </label> 
         
-        <label>Sex: </label> 
+        <input type="text" id="Email" name="Email" size="30" maxlength="30" data-rule-required="true"  data-msg-required="Email is Required" data-rule-email="true"> <br>
+        <label class="formlabel">Sex: </label> 
         
-        <label for="Male"><input type="radio" name="Sex" id="Male" value="M">Male</label> 
+        <label for="Male"><input type="radio" name="Sex" id="Male" value="M" data-rule-required="true" data-msg-required="Sex is Required">Male</label> 
         
         <label for="Female"><input type="radio" name="Sex" id="Female" value="F">Female</label> 
         
         <label for="N/A"><input type="radio" name="Sex" id="N/A" value="N">N/A</label> <br>
         
-        <label for=”Birthday">Birthday </label> 
+        <label for="Birthday" class="formlabel">Birthday </label> 
         
-        <input type="text" id=”Birthday" name="Birthday" size="8" maxlength="8"> <br>
+        <input type="text" id="Birthday" name="Birthday" size="8" maxlength="8" data-rule-date="true" data-rule-required="true"  data-msg-required="Birthday is Required"> <br>
         
-        <label for="Height">Heigh (inches)t: </label> 
+        <label for="Height" class="formlabel">Heigh (inches): </label> 
         
-        <input type="text" id="Height" name="Height" size="3" maxlength="3"> <br>
+        <input type="text" id="Height" name="Height" size="3" maxlength="3" data-rule-required="true"  data-msg-required="Height is Required" data-rule-min="12" data-rule-max="120"> <br>
         
-        <label for="Weight">Weight (pounds): </label> 
+        <label for="Weight" class="formlabel">Weight (pounds): </label> 
+       
+        <input type="text" id="Weight" name="Weight" size="3" maxlength="3" data-rule-required="true"  data-msg-required="Weight is Required" data-rule-min="10" data-rule-max="500"> <br>
+    <hr>
         
-        <input type="text" id="Weight" name="Weight" size="3" maxlength="3"> <br>
-    
+        <label for="PhoneNumber" class="formlabel">Phone Number: </label> 
         
-        <label for="PhoneNumber">Phone Number: </label> 
+        <input type="text" id="PhoneNumber" name="PhoneNumber" size="14" maxlength="14" data-rule-required="true"  data-msg-required="Phone Number is Required" data-rule-phoneUS="true"> <br>
         
-        <input type="text" id="PhoneNumber" name="PhoneNumber" size="14" maxlength="14"> <br>
+        <label class="formlabel">Marital Status: </label> 
         
-        <label>Marital Status: </label> 
-        
-        <select name="MaritalStatus" id="MaritalStatus"> 
+        <select name="MaritalStatus" id="MaritalStatus" data-rule-required="true"  data-msg-required="Marital Status is Required"> 
         
             <option value="">Select a status...</option> 
         
@@ -67,12 +70,12 @@
 
         </select> <br>
 
-            <label for="Address">Address: </label>
-<input type="text" id="Address" name="Address" size="30" maxlength="30"> <br>
+            <label for="Address" class="formlabel">Address: </label>
+<input type="text" id="Address" name="Address" size="30" maxlength="30" data-rule-required="true" data-msg-required="Address is Required"> <br>
 
-<label for="City">City/State/Zip: </label>
-<input type="text" id="City" name="City" size="30" maxlength="30"> ,
-<select id="country-state" name="country-state">
+<label for="City" class="formlabel">City/State/Zip: </label>
+<input type="text" id="City" name="City" size="30" maxlength="30" data-rule-required="true"  data-msg-required="City is Required"> ,
+<select id="country-state" name="country-state" data-rule-required="true"  data-msg-required="State is Required">
     <option value="">Select a State...</option> 
     <option value="AL">Alabama</option>
     <option value="AK">Alaska</option>
@@ -141,13 +144,19 @@
     <option value="WI">Wisconsin</option>
     <option value="WY">Wyoming</option>
 </select>
-<input type="text" id="Zip" name="Zip" size="5" maxlength="5"> <br>
+<input type="text" id="Zip" name="Zip" size="5" maxlength="5" data-rule-required="true" data-msg-required="Zip Code is Required"> <br>
+        <hr>
+<label class="formlabel">Taking Medications: </label> 
         
+        <label for="Yes"><input type="radio" name="Medications" id="Yes" value="Y" data-rule-required="true" data-msg-required="Answer is Required">Yes</label> 
         
-        <label>Taking Medications: </label>
-<label for="MedicationsList">If yes, list medications here: </label>
-<input type="textarea" id="MedicationsList" name="MedicationsList" rows="3" cols="30"></textarea><br>
-
+        <label for="No"><input type="radio" name="Medications" id="No" value="N">No</label> <br>
+        
+<label for="MedicationsList" class="formlabel">If yes, list medications here: </label>
+<textarea name="MedicationsList" rows="3" cols="30" data-rule-required="true" data-msg-required="Medications List is Required">
+   
+    </textarea>
+    <hr>
 <input type="submit" value="SubmitExample" Name="SubmitButton"> 
 <script>
     $( "#SubmitPatientForm" ).validate({
