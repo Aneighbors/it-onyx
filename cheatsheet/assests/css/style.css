@@ -10,8 +10,8 @@ html {
   }
   
   body{
-    font-family: 'Lato', sans-serif;
-    background:#c0c0c0;
+    background-color: #03a6a6;
+    font-family: 'Archivo', sans-serif;
     padding:20px;
   }
   
@@ -24,7 +24,7 @@ html {
   }
   
   section[id]{
-    border:6px solid rgba(0,0,0,.4);
+    border:6px solid #f24405;
     background:#fff;
     border-radius:12px;
     margin:40px auto;
@@ -34,7 +34,7 @@ html {
   }
   
   h2.section-heading{
-     border-bottom:2px solid #c0c0c0;
+     border-bottom:2px solid #f24405;
   }
   
   .section-heading{
@@ -42,7 +42,7 @@ html {
   }
   
   h3.section-heading{
-    border-top:2px solid #c0c0c0;
+    border-top:2px solid #f24405;
     padding-top:20px;
   }
   
@@ -58,7 +58,7 @@ html {
   }
   .markup{
     flex: 1 70%;
-    background-color:lightgrey;
+    background-color:#f27405;
     padding:10px;
     margin-bottom:40px;
     overflow:auto;
@@ -137,11 +137,11 @@ html {
   .token.prolog,
   .token.doctype,
   .token.cdata {
-      color: slategray;
+      color: #f24405;
   }
   
   .token.punctuation {
-      color: #999;
+      color: #f24405;
   }
   
   .token.namespace {
