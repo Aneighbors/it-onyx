@@ -33,6 +33,21 @@
 
                  // display the diameter
                  document.getElementById("diameter").innerHTML = diameter.toString()
+
+                  // calculate the circumference
+                  circumference = calcCircumference(radius);
+
+                  // display the circumference
+                  document.getElementById("circumference").innerHTML = circumference.toString()
+
+                  
+                  // calculate the area
+                  area = calcArea(radius);
+
+                  // display the circumference
+                  document.getElementById("area").innerHTML = area.toString()
+ 
+ 
             
             
                 }
@@ -44,13 +59,27 @@
           {
               return 2 * radius;
           }
+          function calcCircumference (radius)
+          // returns diameter of a circle
+          // 2 times the radius
+          {
+              return 2 * radius * Math.PI
+          }
+
+          function calcArea (radius)
+          // returns area of a circle
+          // 2 times the radius
+          {
+              return  Math.PI * (radius * radius)
+          }
           
+
           function clearForm()
         {
             document.getElementById("radius").value = "";
-            document.getElementById("leg1error").innerHTML = "";
-            document.getElementById("circumference").value = "";
-            document.getElementById("leg2error").innerHTML = "";
-            document.getElementById("hypotenuse").innerHTML = "";
+            document.getElementById("diameter").innerHTML = "";
+            document.getElementById("circumference").innerHTML = "";
+            document.getElementById("area").innerHTML = "";
+            
         }
     
