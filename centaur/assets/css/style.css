@@ -2,51 +2,61 @@ body{
   font-family: 'Archivo', sans-serif;
 font-family: 'Roboto', sans-serif;
 font-family: 'Work Sans', sans-serif;
+background-color: #d7d7d9;
 }
 
 h1{color: #f28d35;
-text-align: center; margin-top: 0%;
-font-size: 100px;}
+  text-shadow: 5px 5px #0339A6;
+text-align: center; margin-top: 5%;
+font-size: 100px;
+margin-bottom: 2%;}
 
+h2{
+  color: #f28d35;
+  text-shadow: 2px 2px #0339A6;
+}
 
-.img1{float:left;}
+.img1{float:left;
+margin-top: 10px;
+margin-left: 10px;}
+
 
 .grid-container {
   display: grid;
     grid-template-columns: auto auto;
   gap: 10px;
-  background-color: #0597F2;
+  background-color: #0339A6;
   padding: 30px;
   margin: 20px;
+
 }
 .grid-container > div {
   padding: 10px 10px;
 }
 
-.item1 {background-color: #0339A6;
+.nav {background-color: #0597F2;
   grid-column-start: 1;
   grid-column-end: 3;
-}
-
-.nav {background-color: #0339A6;
-  grid-column-start: 1;
-  grid-column-end: 3;
+  border-radius: 5%;
 }
 
 .item2 {
   grid-column-start: 1;
   grid-column-end: 3;
+  background-color: #d7d7d9;
 }
 
 .item3 {
   grid-column-start: 1;
   grid-column-end: 3;
+  background-color: #0597F2;
 }
 
 .item4 {
   background-color: #d7d7d9;
   grid-column-start: 1;
   grid-column-end: 2;
+  border-radius: 10%;
 
 }
 
@@ -54,17 +64,20 @@ font-size: 100px;}
   grid-column-start: 2;
   grid-column-end: 3;
   background-color: #d7d7d9;
+  border-radius: 10%;
 }
 
 .item6 {
   grid-column-start: 1;
   grid-column-end: 2;
   background-color: #d7d7d9;
+  border-radius: 10%;
 }
 .item7 {
   grid-column-start: 2;
   grid-column-end: 3;
   background-color: #d7d7d9;
+  border-radius: 10%;
 }
 .item8 {
   grid-column-start: 1;
@@ -72,20 +85,32 @@ font-size: 100px;}
   background-color: #0339A6;
 }
 ul a{color: black;
-  background-color: #d7d7d9;
+  background-color: #f28d35;
   padding: 10px;
   text-decoration: none;
+  border-radius: 20% 0%;
+
 }
 ul.nav li{
   display: inline;
 }
 
 a:hover{
-  color:#f28d35;
+  color:white;
 }
 
-@media screen and (max-width: 600px) {
-  .column {
-    width: 100%;
-  }
+ul.list {
+font-family: 'Zilla Slab', serif;
+font-weight: 200;
+}
+
+footer{
+color: #f28d35;}
+
+.top{
+  color: black;
+  background-color: #f28d35;
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 20% 0%;
 }
