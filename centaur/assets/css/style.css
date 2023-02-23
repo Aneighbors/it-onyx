@@ -20,10 +20,15 @@ h2{
 margin-top: 10px;
 margin-left: 10px;}
 
+.floatright{float:right;
+  margin: 10px;}
+
+  .sketch{float:right;
+    margin: 30px;}
 
 .grid-container {
   display: grid;
-    grid-template-columns: auto auto;
+  grid-template-columns: 1fr 1fr;
   gap: 10px;
   background-color: #0339A6;
   padding: 30px;
