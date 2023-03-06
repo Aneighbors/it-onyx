@@ -7,13 +7,12 @@ background-color: #d7d7d9;
 
 h1{color: #f28d35;
   text-shadow: 5px 5px #0339A6;
-text-align: center; margin-top: 5%;
-font-size: 100px;
-margin-bottom: 2%;}
+font-size: 8vw;
+margin-bottom: 2%;
+text-align: center; margin-top: 5%;}
 
 h2{
-  color: #f28d35;
-  text-shadow: 2px 2px #0339A6;
+  color: black;
 }
 
 .img1{float:left;
@@ -26,15 +25,15 @@ margin-left: 10px;}
   .sketch{float:right;
     margin: 30px;}
     
-.grid-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
-  background-color: #0339A6;
-  padding: 30px;
-  margin: 20px;
-
-}
+    .grid-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      background-color: #0339A6;
+      padding: 30px;
+          margin: 20px;
+    }
+    
 .grid-container > div {
   padding: 10px 10px;
 }

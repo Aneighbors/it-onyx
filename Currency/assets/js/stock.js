@@ -30,8 +30,7 @@ async function GetCurrency() {
                 /* Your code to process the result goes here  
                     display the returned message */
                 var closeprice = [];
-                var stockvalue = [];
-                var stockvolume = [];
+                var stockdate= [];
                 var numdays = msg2.results.length;
                 if (numdays > 0) {
                     for (var i = 0; i < numdays; i++) {
@@ -50,8 +49,8 @@ async function GetCurrency() {
                 var myChart = new Chart(ctx0, {
                     "type":"line",
                     "data": {
-                        "labels": closeprice,
-                        "datasets":[{"label":"Stock Close",
+                        "labels": stockdate,
+                        "datasets":[{"label":"closeprice",
                         "data": closeprice,
                         "fill":false,
                         "borderColor":"rgb(75, 192, 192)",
@@ -74,18 +73,14 @@ async function GetCurrency() {
 }
 
 function ClearForm() {
-    document.getElementById("StockSymbol").value = "";
     document.getElementById("FromDate").value = "";
     document.getElementById("ToDate").value = "";
-    document.getElementById("company").innerHTML = "";
-    document.getElementById("address").innerHTML = "";
-    document.getElementById("employees").innerHTML = "";
-    document.getElementById("ceo").innerHTML = "";
-    document.getElementById("url").innerHTML = "";
-    document.getElementById("url").href = "";
-    document.getElementById("logo").src = "";
-    document.getElementById("StockValueTable").innerHTML = "";
-    document.getElementById("StockVolumeTable").innerHTML = "";
+    document.getElementById("selconvertcurrency").checked = false;
+
+
+  
+    
+    
     
     /* Ugly Code to Erase Canvas */
     var canvas0 = document.getElementById("chartjs-0");
