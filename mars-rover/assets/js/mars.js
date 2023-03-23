@@ -16,6 +16,7 @@ async function GetPhotos() {
         if (document.getElementById("curiosity").checked) {
             rover = document.getElementById("curiosity").value;
         }
+
         if (document.getElementById("opportunity").checked) {
             rover = document.getElementById("opportunity").value;
         }
@@ -34,8 +35,7 @@ async function GetPhotos() {
 let PictureObject = await fetch(myURL2);
 let Result = await PictureObject.text();
 let msg =JSON.parse(Result); 
-document.getElementById("numberofphotos").
-innerHTML = msg.photos.length;
+document.getElementById("numberofphotos").innerHTML = msg.photos.length + " pictures found"
 if (numberofphotos >25)
 {numberofphotos = 25}
                 
@@ -46,12 +46,15 @@ if (numberofphotos >25)
                    document.getElementById("image" + i).style.visibility = "visible";
                 }
             }
-        else {
-            /* AJAX completed with error - probably invalid stock ticker symbol */
-            alert("Stock Not Found - Status: " + msg2Object.status)
-            return
-        }
+            
+      
     }
+
+function myfunction(){
+    var picturedate = document.getElementById("curiosity").value;
+    document.getElementById("picturedate").value = "08/06/2012"
+}    
+  
 function clearorm() {
     document.getElementById("FromDate").value = "";
     document.getElementById("ToDate").value = "";

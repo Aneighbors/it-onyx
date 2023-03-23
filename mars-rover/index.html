@@ -17,17 +17,17 @@
         </tr>
         <tr>
           <td>Curiosity</td>
-          <td>Opportunity</td>
-          <td>Spirit</td>
-        </tr>
-        <tr>
           <td>08/06/2012</td>
-          <td>01/26/2004</td>
-          <td>01/05/2004</td>
+          <td>09/28/2019</td>
         </tr>
         <tr>
-            <td>09/28/2019</td>
-            <td>06/11/2018</td>
+          <td>Opportunity</td>
+          <td>01/26/2004</td>
+          <td>06/11/2018</td>
+        </tr>
+        <tr>
+            <td>Spirit</td>
+            <td>01/05/2004</td>
             <td>03/21/2004</td>
           </tr>
       </table>
@@ -36,13 +36,13 @@
       <label class="formlabel">Rover: </label>
       <label for="curiosity">
           <input type="radio" name="rover" id="curiosity" value="curiosity"
-                 data-rule-required="true" data-msg-required="Rover is Required" />Curiosity
+                 data-rule-required="true" data-msg-required="Rover is Required" onchange="myFunction()">Curiosity
       </label>
       <label for="opportunity">
-          <input type="radio" name="rover" id="opportunity" value="opportunity">Opportunity
+          <input type="radio" name="rover" id="opportunity" value="opportunity" onchange="myFunction()">Opportunity
       </label>
       <label for="spirit">
-          <input type="radio" name="rover" id="spirit" value="spirit">Spirit
+          <input type="radio" name="rover" id="spirit" value="spirit" onchange="myFunction()">Spirit
       </label>
   <label for="rover" class="error" id="roverError"></label>
   <br><br>
@@ -55,7 +55,7 @@
 <br>
         <input type="button" value="search" id="search" name="search" onclick="GetPhotos();">
         <input type="submit" value="Clear" id="butnclear" onclick="clearform();" ><br> 
-        Number of photos found: <div class="wrapper2"><span id="numberofphotos"></span></div> 
+        <span id="numberofphotos"></span>
     </form>
         <hr>
         <img src="" id="image0">
@@ -89,5 +89,11 @@
         <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
         <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
         <script src="assets/js/mars.js"></script>
+        <script>
+        function myFunction() {
+            var x = document.getElementById("curiosity").value;
+            document.getElementById("picturedate").innerHTML = "08/06/2012";
+          }
+          </script>
 </body>
 </html>
