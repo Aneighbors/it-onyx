@@ -50,10 +50,10 @@ if (numberofphotos >25)
       
     }
 
-function myfunction(){
-    var picturedate = document.getElementById("curiosity").value;
-    document.getElementById("picturedate").value = "08/06/2012"
-}    
+    function openToolTip () {
+        var tooltipPopup = document.getElementById("displayText");
+        tooltipPopup.classList.toggle("show"); // toggle the tooltip
+        }
   
 function clearorm() {
     document.getElementById("FromDate").value = "";
