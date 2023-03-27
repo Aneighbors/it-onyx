@@ -1,3 +1,17 @@
+function myFunction() {
+    var picturedate;
+    if (document.getElementById("curiosity").checked) {
+        document.getElementById("picturedate").value="2012-08-06";
+    }
+
+    if (document.getElementById("opportunity").checked) {
+        document.getElementById("picturedate").value= "2004-01-26";
+    }
+    if (document.getElementById("spirit").checked) {
+        document.getElementById("picturedate").value= "2004-01-05";
+    }
+}
+
 async function GetPhotos() {
     "use strict";
 
@@ -41,23 +55,13 @@ if (numberofphotos >25)
                 
                 for (let i = 0; i < 25; i++) {
                     // Note how we construct the name for image1, image2, etc...this sets the image source
-                    document.getElementById("image" + i).src = msg.photos[i].img_src;
+                   document.getElementById("image" + i).src = msg.photos[i].img_src;
                    /* do something to set the tool tip = msg.photos[i].camera.full_name; */
                    document.getElementById("image" + i).style.visibility = "visible";
+                   document.getElementById("image" + i).title = msg.photos[i].camera.full_name;
                 }
             }
             
       
     }
-
-    function openToolTip () {
-        var tooltipPopup = document.getElementById("displayText");
-        tooltipPopup.classList.toggle("show"); // toggle the tooltip
-        }
-  
-function clearorm() {
-    document.getElementById("FromDate").value = "";
-    document.getElementById("ToDate").value = "";
-    document.getElementById("selconvertcurrency").checked = false;
-
-}
+    
