@@ -84,3 +84,6 @@ label {color: white;}
 #picturedate{
   margin-bottom: 20px;
 }
+a{
+  visibility: hidden;
+}
