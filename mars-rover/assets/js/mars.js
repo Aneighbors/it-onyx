@@ -72,7 +72,7 @@ if (numberofphotos >25)
                 
                 for (let i = 0; i < 25; i++) {
                     document.getElementById("href" + i).href = msg.photos[i].img_src;
-                    document.getElementById("href" + i).style.visibility = "visible";
+                
     }           
 
       }
