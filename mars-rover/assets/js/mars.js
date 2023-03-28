@@ -59,9 +59,20 @@ if (numberofphotos >25)
                    /* do something to set the tool tip = msg.photos[i].camera.full_name; */
                    document.getElementById("image" + i).style.visibility = "visible";
                    document.getElementById("image" + i).title = msg.photos[i].camera.full_name;
+                   
+
                 }
             }
-            
-      
+let PictureObject = await fetch(myURL2);
+let Result = await PictureObject.text();
+let msg =JSON.parse(Result); 
+document.getElementById("numberofphotos").innerHTML = msg.photos.length + " pictures found"
+if (numberofphotos >25)
+{numberofphotos = 25}
+                
+                for (let i = 0; i < 25; i++) {
+                    document.getElementById("href" + i).href = msg.photos[i].img_src;
     }
+
+      }
     
