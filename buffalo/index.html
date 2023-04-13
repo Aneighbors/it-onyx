@@ -8,29 +8,33 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="header">
+  <main>
+    <header role="banner" class="primary container">
+      <div>
         <img src="assets/img/logo.png" class="logo">
-        <div class="header-right">
-          <a class="active" href="index.html">Home</a>
+        </div>
+          <div id="nav" class="header-right">
+    
+          <a href="index.html">Home</a>
           <a href="index.html">Rental/Rates</a>
           <a href="weather.html">Weather/GPS</a>
           <a href="faq.html">About/FAQ</a>
           <a href="contact.html">Contact Us</a>
-        </div>
-      </div>
-     
-       <div class="jumbotron">
-       <div class="jumbotron-inner">
+          
+          </div>
+        </header>
+      
+      <section id="content" class="container jumbotron clearfix">
+       <div class="jumbotron-inner clearfix">
         <img src="assets/img/bird-eye2.jpg" class="jumbo-img">
           <h1 class="display-5 fw-bold">Introducing The Buffalo Experience</h1>
           <p>Enjoy nature and the wildlife down at the Buffalo River today. Make your reservations today!</p>
-          <div class="jumbotron-btn">
+          <div class="jumbotron-btn clearfix">
           <a href ="#" class="btn-one">About</a>
           <a href ="#" class="btn-two">Reservations</a>
-        </div>
-        
       </div>    
     </div>
+    </section>
 
     <div class="slideshow-container">
 
@@ -65,12 +69,14 @@
         <span class="dot" onclick="currentSlide(2)"></span>
         <span class="dot" onclick="currentSlide(3)"></span>
       </div>
+
+      
  
       <a class="weatherwidget-io" href="https://forecast7.com/en/36d01n93d19/jasper/?unit=us" data-label_1="BUFFALO RIVER" data-label_2="WEATHER" data-font="Open Sans Condensed" data-icons="Climacons Animated" data-mode="Forecast" data-theme="pure" data-textcolor="#000" data-highcolor="#65333A" data-suncolor="#CB7647" data-cloudcolor="#C4AF9B" >BUFFALO RIVER WEATHER</a>
         <div class="footer">
           <img src="assets/img/logo.png" class="logo">
           <div class="footer-right">
-            <a class="active" href="index.html">Home</a>
+            <a href="index.html">Home</a>
             <a href="index.html">Rental/Rates</a>
             <a href="weather.html">Weather/GPS</a>
             <a href="faq.html">About/FAQ</a>
@@ -84,6 +90,6 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.cycle/3.03/jquery.cycle.all.min.js"></script>
         <script src="assets/js/local-calls.js"></script>
         <script src="assets/js/slideshow.js"></script>
-    
+  </main>  
 </body>
 </html>
