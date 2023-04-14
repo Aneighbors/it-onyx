@@ -22,7 +22,7 @@ main{
 
 
 header.primary{
-  background-color: #f8f5f3;
+  background-color: #EAE1D9;
   padding:20px;
   background-repeat: no-repeat;
   background-size:cover;
@@ -34,13 +34,13 @@ header.primary{
 
 #nav {
   overflow: hidden;
-  background-color: white;
+  background-color: EAE1D9;
   padding: 10px;
+  
 }
 
 /* Style the header links */
 #nav a {
-  float: right;
   color: black;
   text-align: center;
   padding: 12px;
@@ -58,21 +58,20 @@ header.primary{
   }
 
 /* Float the link section to the right */
-#nav.header-right {
-  float: right;
-}
 
 header.primary nav ul{
 list-style-type: none;
 padding:0;
-
 }
  
 .logo{
   float:left;
       max-width: 200px;
       height: auto;
-      object-fit: contain;
+  }
+
+  .header-right {
+    float: right;
   }
 
 
@@ -211,7 +210,7 @@ padding:0;
 
 .footer {
   overflow: hidden;
-  background-color: white;
+  background-color: #EAE1D9;
   padding: 10px;
 }
 
