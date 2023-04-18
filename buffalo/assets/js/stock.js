@@ -21,15 +21,15 @@ async function GetData() {
 
     var ctx0 = document.getElementById("chartjs-0");
     var myChart = new Chart(ctx0, {
-        type:'line',
-        data: { 
-            datasets:[{"dates":"values",
-            label: 'River Levels',
-            data: 'values',
-            fill:'false',
-            borderColor:"rgb(75, 192, 192)",
-            lineTension:0.1}]},
-            options:{ 
+        "type":"line",
+        "data": {
+            "labels": dates, 
+            "datasets":[{"dates":"values",
+            "data": values,
+            "fill":false,
+            "borderColor":"#65333A",
+            "lineTension":0.1}]},
+            "options":{ 
                 responsive: false,
                 maintainAspectRatio: true,
             }
@@ -55,7 +55,7 @@ var myChart = new Chart(ctx0, {
         "datasets":[{"dates":"values",
         "data": values,
         "fill":false,
-        "borderColor":"rgb(75, 192, 192)",
+        "borderColor":"#65333A",
         "lineTension":0.1}]},
         "options":{ 
             responsive: false,
@@ -83,7 +83,7 @@ var myChart = new Chart(ctx0, {
         "datasets":[{"dates":"values",
         "data": values,
         "fill":false,
-        "borderColor":"rgb(75, 192, 192)",
+        "borderColor":"#65333A",
         "lineTension":0.1}]},
         "options":{ 
             responsive: false,
@@ -112,7 +112,7 @@ var myChart = new Chart(ctx0, {
         "datasets":[{"dates":"values",
         "data": values,
         "fill":false,
-        "borderColor":"rgb(75, 192, 192)",
+        "borderColor":"#65333A",
         "lineTension":0.1}]},
         "options":{ 
             responsive: false,
