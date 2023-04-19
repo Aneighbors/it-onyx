@@ -11,7 +11,8 @@
   }
 
 
-body{background-color: #65333A;}
+body{background-color: #65333A;
+  font-family: 'Roboto', sans-serif;}
 
 main{
   background-color: #C4AF9B;
@@ -26,13 +27,14 @@ header.primary{
   padding:20px;
   background-repeat: no-repeat;
   background-size:cover;
-  display:flex;
   flex-direction: row;
+  overflow: hidden;
   }
 
 
 
 #nav {
+  overflow: hidden;
   background-color: EAE1D9;
   padding: 10px;
   
@@ -75,9 +77,10 @@ padding:0;
 
 
 .jumbotron{
-    height: 300px;
+    height: 100%;
     display: flex;
     margin:auto;
+    margin-top: 20px;
     align-items: center;
     justify-content: center;
   
@@ -97,6 +100,7 @@ padding:0;
    display: flex;
    justify-content: center;
    
+   
 }
 .jumbotron .jumbotron-inner .jumbotron-btn .btn-one{
    padding: 8px 14px;
@@ -104,7 +108,8 @@ padding:0;
    background-color: #79845B;
    color: #f1f1f1;
    margin-right: 10px;
-  margin-top: 10px;}
+  margin-top: 10px;
+  text-decoration: none;}
 
    .jumbotron .jumbotron-inner .jumbotron-btn .btn-two{
     padding: 8px 14px;
@@ -112,7 +117,8 @@ padding:0;
     background-color: #79845B;
     color: #f1f1f1;
     margin-right: 10px;
-  margin-top: 10px;}
+  margin-top: 10px;
+  text-decoration: none;}
 
     .jumbo-img{
       float:right;
@@ -122,7 +128,7 @@ padding:0;
 
     /* Slideshow container */
 .slideshow-container {
-  max-width: 1000px;
+  max-width: 100%;
   position: relative;
   margin: auto;
   clear: left
@@ -246,15 +252,79 @@ clear: both;
 display: table;
 }
 
-.grid-container {
-  display: grid;
-  grid-template-columns: auto auto;
-  padding: 10px 0 0 100px;
+.title {
+  position: relative;
+  text-align: center;
+  color: white;
+
 }
 
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 3em;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center
+}
+
+
+.img-container {
+background-color: #EAE1D9;
+margin: 20px;}
+
 iframe{
-  margin-top: 20px;
-  margin-left:20px;
+ width: 100%;
+ margin: 0 auto;
+}
+
+ .map{
+  font-size: 3.2rem;
+  background-color: #CB7637;
+  text-align: center;
+  color:white;
+  padding-top: 15px;
+}
+
+.weatherwidget-io{
+  width: 100%;
+}
+
+.fa{
+  padding:20px;
+  font-size:30px;
+  width:50px;
+  text-align:center;
+  text-decoration:none;
+}
+
+.fa:hover{
+  opacity:0.7;
+}
+
+/* Facebook */
+.fa-facebook {
+  background: #CB7647;
+  color: white;
+}
+
+/* Instagram */
+.fa-instagram{
+  background: #79845B;
+  color: white;
+}
+
+/* Google */
+.fa-google{
+  background: #94605A;
+  color: white;
 }
 /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
 @media screen and (max-width: 500px) {
@@ -279,13 +349,10 @@ iframe{
       height: auto;
     
   }
- 
+
+  .flex-container {
+    display: flex;
+    flex-direction: column;
   }
 
-  @media screen and (max-width: 500px) {
-    .jumbotron{
-      height: auto;
-    
-  }
-  }
-
+}
