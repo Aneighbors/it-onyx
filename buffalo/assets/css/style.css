@@ -369,8 +369,9 @@ iframe{
 @media screen and (max-width: 750px) {
   .flex-container {
     display: flex;
-    flex-direction: column;
-  }}
+    flex-direction: column;}
+
+  }
 
   @media screen and (max-width: 900px) {
   .jumbo-img{
@@ -381,6 +382,11 @@ iframe{
     padding-bottom: 10px;
 
   }
+
+  
+  .img-container {
+    background-color: #EAE1D9;
+    margin-left: 0px;}
 
   .header-right {
     float: none;
