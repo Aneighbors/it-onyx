@@ -1,0 +1,504 @@
+html{
+    box-sizing: border-box; 
+   }
+   *, *:before, *:after{
+    margin:0px;
+  padding: 0px;
+     box-sizing: inherit;
+   }
+  
+  .container{
+  margin:auto;
+  padding: 0 40px 40px 40px;
+  
+  }
+  
+  
+  body{
+    background-color: #65333A;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  main{
+  background-color: #fff;
+  max-width:1140px;
+  margin:auto;
+  }
+  
+  
+  header.primary{
+  background-color: #EAE1D9;
+  padding:20px;
+  background-repeat: no-repeat;
+  overflow:hidden;
+  flex-direction: row;
+  }
+  
+  
+  
+  #nav {
+  overflow: hidden;
+  background-color: EAE1D9;
+  padding: 10px;
+  }
+  
+  /* Style the header links */
+  #nav a {
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+  }
+  
+  
+  /* Change the background color on mouse-over */
+  #nav a:hover {
+    background-color: #65333A;
+    color: white;
+  }
+  
+  /* Float the link section to the right */
+  
+  header .logo{
+    float: left;
+    max-width: 200px;
+    height: auto;
+}
+
+.logo{
+  max-width: 200px;
+  height: auto;
+}
+  
+  .header-right {
+    float: right;
+  }
+
+
+.canoes-banner{
+  background-color: #181c1f;
+  text-align: center;
+  color: #ffffff;
+  text-shadow: 2px 2px #000000;
+  /* Shorhand T,R,B,L*/
+  padding: 6em 2em;
+  position: relative;
+}
+
+.canoes-banner::before{
+  content: "";
+  background-image: url("../img/canoes1.jpg");
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: .9;
+}
+
+.canoes-banner h1{
+  font-size: 4.2rem;
+  text-transform:uppercase;
+  margin: 50px 10px 20px 10px;
+  position: relative;
+}
+
+.canoes-banner h1 a{
+  color: #ffffff;
+  text-decoration: none;
+  display: block;
+  margin: 0 auto;
+}
+
+.container-canoes details{
+  font-size:1.2rem;
+  text-align:center;
+  width:70vw;
+  max-width:900px;
+  margin:40px auto;
+}
+
+.container-canoes details summary{
+  font-size:3.2rem;
+}
+
+
+.popup{
+  background-color: #CB7647;
+  width: 450px;
+  padding: 10px 20px;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  left: 50%;
+  top: 100%;
+  border-radius: 8px;
+  font-family: "Roboto",sans-serif;
+  display: none;
+  text-align: center;
+  color: #fff;
+}
+.popup button{
+  display: block;
+  margin:  0 0 20px auto;
+  background-color: transparent;
+  font-size: 30px;
+  color: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.popup p{
+  font-size: 14px;
+  text-align: justify;
+  margin: 20px 0;
+  line-height: 25px;
+  text-align: center;
+}
+
+
+.cabins-banner{
+  background-color: #181c1f;
+  text-align: center;
+  color: #ffffff;
+  text-shadow: 2px 2px #000000;
+  /* Shorhand T,R,B,L*/
+  padding: 6em 2em;
+  position: relative;
+}
+
+.cabins-banner::before{
+  content: "";
+  background-image: url("../img/bear-ridge.jpg");
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: .9;
+}
+
+.cabins-banner h1{
+  font-size: 4.2rem;
+  text-transform:uppercase;
+  margin: 50px 10px 20px 10px;
+  position: relative;
+}
+
+.cabins-banner h1 a{
+  color: #ffffff;
+  text-decoration: none;
+  display: block;
+  margin: 0 auto;
+}
+
+.container-cabins details{
+  font-size:1.2rem;
+  text-align:center;
+  width:70vw;
+  max-width:900px;
+  margin:40px auto;
+}
+
+.container-cabins details summary{
+  font-size:3.2rem;
+}
+
+
+
+
+
+.shuttles-banner{
+  background-color: #181c1f;
+  color: #ffffff;
+  text-shadow: 2px 2px #000000;
+  /* Shorhand T,R,B,L*/
+  padding: 2em;
+  position: relative;
+}
+
+.shuttles-banner::before{
+  content: "";
+  background: #79845B;
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
+
+.shuttles-banner h1{
+  font-size: 4.2rem;
+  text-transform:uppercase;
+  margin: 30px 10px 20px 10px;
+  position: relative;
+  text-align:center;
+}
+
+.shuttles-banner h1 a{
+  color: #ffffff;
+  text-decoration: none;
+  display: block;
+  margin: 0 auto;
+}
+
+.container-shuttles p, table{
+  position: relative;
+  font-size:1.2rem;
+  padding-left: 40px;
+  padding-right: 40px;
+  text-shadow: none;
+}
+
+.container-shuttles p{
+  margin-bottom: 15px;
+}
+
+.container-shuttles table{
+  width:100%;
+  border:1px solid #fff;
+  border-collapse:collapse;
+  margin-bottom:40px;
+}
+
+table td{
+  border:1px solid #fff;
+  padding:5px;
+}
+
+table tr:hover{
+  background-color:rgba(101,51,58,.4);
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+  
+.footer{
+  overflow: hidden;
+  background-color: #EAE1D9;
+  padding: 10px;
+}
+
+/* Style the header links */
+.footer a {
+  float: right;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+
+/* Change the background color on mouse-over */
+.footer a:hover {
+    background-color: #65333A;
+    color: white;
+  }
+
+/* Float the link section to the right */
+.footer-right {
+  float: right;
+}
+
+.clearfix {
+  overflow: auto;
+}
+
+/* Style all font awesome icons */
+.fa{
+  padding:20px;
+  font-size:30px;
+  width:50px;
+  text-align:center;
+  text-decoration:none;
+}
+
+.fa:hover{
+  opacity:0.7;
+}
+
+/* Facebook */
+.fa-facebook {
+  background: #CB7647;
+  color: white;
+}
+
+/* Instagram */
+.fa-instagram{
+  background: #79845B;
+  color: white;
+}
+
+/* Google */
+.fa-google{
+  background: #94605A;
+  color: white;
+}
+
+#top-link{
+  text-align: center;
+}
+
+#top-link a:link, #top-link a:visited{
+color: #fff;
+text-decoration: none;
+}
+
+#links a:link, #links a:visited{
+  color: #BDCF8F;
+}
+
+/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+
+@media screen and (max-width: 900px) {
+  .jumbo-img{
+    float:none;
+    margin: auto;
+    display: block;
+    padding-left: 0%;
+  }
+
+  .jumbotron .jumbotron-inner p{
+    margin: auto;
+    display: block;
+    text-align: center;
+}
+
+.jumbotron .jumbotron-inner h1{
+  margin: auto;
+  display: block;
+  text-align: center;
+}
+
+.jumbotron-btn{
+  padding-bottom: 20px;
+}
+
+}
+
+
+@media screen and (max-width: 750px){
+  
+  .flex-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  header .logo{
+    float: none;
+    margin: auto;
+    display: block;
+    padding-left: 0%;
+  }
+
+  .logo{
+    float:none;
+    margin: auto;
+    display: block;
+    padding-left: 0%;
+  }
+  
+  .header-right{
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    margin:0 auto;
+  }
+  
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .header-right {
+    float: none;
+  }
+  }
+  
+
+
+@media screen and (max-width: 500px) {
+
+  .container{
+    padding: 2px;
+    }
+
+ .container-cabins details{
+    font-size:.8rem;
+  }
+
+  .container-cabins details summary{
+    font-size:1.6rem;
+  }
+
+  .container-canoes details{
+    font-size:.8rem;
+  }
+
+  .container-canoes details summary{
+    font-size:1.6rem;
+  }
+
+  .canoes-banner h1{
+    font-size:2.6rem;
+  }
+
+  .cabins-banner h1{
+    font-size:2.6rem;
+  }
+
+  .shuttles-banner h1{
+    font-size:2.6rem;
+  }
+
+  .container-shuttles p, table{
+    font-size:.8rem;
+  }
+
+  .footer a {
+    display: block;
+    text-align: left;
+  }
+
+  .footer-right {
+    float: none;
+  }
+  
+  .header a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+
+  .header-right {
+      float: none;
+    }
+
+  .jumbotron{
+      height: auto;
+  }
+ 
+  .map{
+    font-size:2.6rem;
+    padding-top:10px
+  }
+  
+.popup{
+  width:250px;
+}
+
+  }
+
