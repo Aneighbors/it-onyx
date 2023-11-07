@@ -3,9 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
     <title>Document</title>
 </head>
 <body>
-    <p>hello world</p>
+    <div class="tab">
+        <button class="tablinks" onclick="openTab(event, 'Profile')" id="defaultOpen">Profile</button>
+        <button class="tablinks" onclick="openTab(event, 'Resume')">Resume</button>
+        <button class="tablinks" onclick="openTab(event, 'Cover Letter')">Cover Letter</button>
+        <button class="tablinks" onclick="openTab(event, 'Works')">Works</button>
+        <button class="tablinks" onclick="openTab(event, 'Reflection')">Reflection</button>
+      </div>
+      
+      <!-- Tab content -->
+      <div id="Profile" class="tabcontent">
+        <img><p>Professional Photo</p>
+        <p>Elevator Pitch</p>
+      </div>
+      
+      <div id="Resume" class="tabcontent">
+        <a href="resume/index.html">Resume</a>
+      </div>
+      
+      <div id="Cover Letter" class="tabcontent">
+        <h3>Cover Letter</h3>
+        <p>Name
+            Title
+            Company
+            Address
+            City, State, Zip Code
+            
+            Dear Mr./Ms. Last Name
+            
+            I am writing to express interest in the _____ position as advertised on ____. As a recent graduate with experience in front-end development I believe I am a strong candidate for a position at ____. 
+            
+            I will have a bachelor's degree with a focus in Web Design and Devlopment and a Minor in Information Technology. I currently have a 3.9 GPA. I hope to be an asset to your team. The programming languages that I have experience with are HTML, CSS, and JavaScript. I am currently employed as a Radiologic Technologist at HealthCare Express. So, I have real world experience, I have been in my current position for over 6 years. While working at HCE I have taken on many additional responsibilities. I am a very hard worker and I love to learn. This is what made me pursue my degree in web design. This field is always changing, so I will always have more to learn. I enjoy coding very much, and I am so glad that I am able to do something that I enjoy doing. I look forward to bringing my love for learning and coding to your company.  
+            
+            Thank you for considering me for this position. I hope to hear from you soon.
+            
+            Sincerely yours,
+            
+            Signature:
+            
+            Alyson Neighbors</p>
+      </div>
+      
+      <div id="Works" class="tabcontent">
+        <h3>Writing Skills</h3>
+        <a href="Paper assignment 2.pdf">writing-1</a>
+        <p>I wrote this paper for my Social Computing class. We collected ten research articles dealing with “Identifying Influential Bloggers.” This paper is a comparative review of goals, approaches, and findings presented in these ten articles. It was written in APA style.</p>
+        <a href="Proposal.pdf">writing-2</a>
+        <p>This is a project proposal that I wrote. It details how as a community my neighborhood could work together to decrease crime in the neighborhood. This letter summarizes the problem of increased crime in our neighborhood and proposes 3 tasks that could be implemented to help minimize crime. These include forming a Neighborhood Crime Watch, increasing street lighting, and making the neighborhood a gated community. In the paper I explain how each of these will help solve the problem, and how we can go about implementing each step. </p>
+
+        <h3>Soft Skills</h3>
+        <p>This paper reflects all that I learned in my Mobile Web Development class Spring 2023. I worked hard and greatly enjoyed this class, and I learned a lot. Reading through this paper just a semester later I know how much further my skills have grown, and I can’t wait to take my skills even further.</p>
+        <a href="Course_Takeaway.pdf">soft-skills-1</a>
+        <p>This is a PowerPoint presentation that I presented as a Sales speech about myself, and why I would make a good teammate, and now a good employee. This is my personality type, and it speaks volumes about me: “Adventurers are tolerant and friendly, & usually just do what needs to be done regardless of whether their colleagues pull their own weight.”</p> 
+        <a href="Art-Attendence1.pdf">soft-skills-2</a>
+
+        <h3>Web Examples</h3>
+        <p>For this website, our two clients came to us in hopes that we could help get them a site up and running. They had a cabin and canoes for rent in Jasper, Arkansas and wanted a way to advertise and be able to rent these out to people. Another thing they specifically asked for were graphs that would show the river levels by pulling through an API. I think that we were able to build a beautiful site that met our client’s needs.</p>
+        <a href="https://web-projects.net/jasper/">Web-1</a>
+        <p>For this project we built a website for JAPC, Jasper Advertising and Promotions Commission. Our client, the director of JAPC, Lisa Duet, came seeking our help to get them a website up and running. When Mrs. Duet came to us their company just had a small portion of the city of Jasper's website. But, since they didn't manage this site, they were limited in the ways that they could change and update information. I feel that through this website JAPC will be able to promote the city of Jasper more efficiently and effectively.</p><a href="https://5500-aneighbors-itonyx-tm96p39ijo5.ws-us106.gitpod.io/final-project/index.html">Web-2</a>
+        
+        <h3>Programming Examples</h3>
+        <p>This is a Mars Rover Database, that utilizes an AJAX call to nasa.api.gov and pulls over photos of the Mars rover missions.  You can click on which rover you want Curiosity, Opportunity, or Spirit. Once you select a rover the picture date automatically sets to the first date of the mission, you can click search, or select a later date and search. It will then show you the pictures from that date as thumbnails, you can hover over each picture and a tooltip will appear with the name of the camera. You can also select the picture and a larger image will pop up.</p>
+        <p><a href="../mars-rover/index.html">Progamming-1 Mars Rover</a></p>
+        <p>This is to show currency value history, it allows the user to select between 5 currencies to convert from and to and prompts the user to put in from and to dates. This application constructs a URL and makes an AJAX call to Polygon.io Forex data. It utilizes chart.js to display the data in a graph. </p>
+        <p><a href="../Currency/index.html">Programming-2 Currency Conversion</a></p>
+        <p>This calculator uses JavaScript to preform basic math functions: addition, subtraction, multiplication and division between two munbers. </p>
+      
+        <h3>Database Examples</h3>
+        <a href="https://docs.google.com/spreadsheets/d/1h_PN733fQ0EB0odnKikAWZPE74IWAaPoW-nwWXcGeTU/edit#gid=0">database-1</a>
+        <p>This database utilizes Excel and many of its functions such as Count, CountIFS, Sum, Average, if Statements, conditional Format and more. This is a fictional inventory for a Jewelry store. You can see the conditional format at play in the stock level, if its quantity is low and needs to be ordered, it will highlight it red and change the word to “order”, if the stock level is ok, it will be green, and say “ok.”</p>
+        <a href="https://docs.google.com/spreadsheets/d/1MjNLHGlnmB7uvqP5BQQ8dDpenJiJBjN_sKLNGrYghxw/edit#gid=0">database-2</p>
+        <p>This Excel sheet is for a school district that must plan for additional students enrolling as the city grows. There is 4 sheets total, one for the elementary schools, middle schools, high schools, and a total of all. Each formula is calculated with the projected increase of growth. A bar chart is visualized on each sheet as well to help show the growth.</p>
+        </div>
+
+      <div id="Reflection" class="tabcontent">
+        <h3>Reflection</h3>
+        <p>Reflection</p>
+      </div>
+      
+    
+    <script type="text/javascript" src="assets/scripts/index.js"></script>
 </body>
 </html>

@@ -1,0 +1,374 @@
+
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  /* ------ Typography -------
+  CoconPro Regular
+  font-family: "ff-cocon-pro", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  
+  CoconPro Bold
+  font-family: "ff-cocon-pro", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  
+  CoconPro Excon
+  font-family: "ff-cocon-pro-extra-cn", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  
+  CoconPro BoldExcon
+  font-family: "ff-cocon-pro-extra-cn", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  
+  CoconPro RegularCond
+  font-family: "ff-cocon-pro-condensed", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  
+  CoconPro BoldCond
+  font-family: "ff-cocon-pro-condensed", sans-serif;
+  font-weight: 700;
+  font-style: normal; */
+  body{
+    font-family: "ff-cocon-pro", sans-serif;
+    font-weight: 400;
+    font-style: normal;}
+  
+  p, li{
+    font-family: "span", serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+  .related-links li{ font-family: "ff-cocon-pro", sans-serif;
+    font-weight: 400;
+    font-style: normal;}
+  
+  /* ------ Fluid Images -------*/
+  
+  img{max-width:100%;}
+  
+  /* ------ Utility Classes  -------*/
+  .container{
+    margin:0 auto;
+    background:#D9B2A9;
+  }
+  
+  /* ------ Helper Classes -------*/
+  .visuallyhidden {
+      border: 0;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+      white-space: nowrap; /* 1 */
+  }
+  
+  /* ------ Global Styles -------*/
+  body{
+    background:#024959;
+    color:#222222;
+    line-height:1.6
+  } 
+  a:link, a:visited{
+    color: #cef2e8;
+  }
+  
+  nav{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding:20px 20px 0px 20px;
+    color:#026873;
+  }
+  nav a:link, nav a:visited{
+    padding:8px 16px;
+    border:4px solid #D9B2A9;
+    text-align:center;
+    text-decoration:none;
+    text-transform:uppercase;
+    font-size:.75em;
+    background:#026873;
+    transition: background-color .5s ease;
+    color:#cef2e8;
+    border-radius: 100%;
+  }
+  
+  nav a:hover{
+    background:#cef2e8;
+    color:#026873;
+  }
+  
+  main{
+    padding: 1px 20px;
+  }
+  
+  main h1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    font-weight:400;
+    font-variant:small-caps;
+    color:#024959;
+  }
+  main h1:before, main h1:after {
+    background-color: #024959;
+    content: '\a0';
+    flex-grow: 1;
+    height: 1px;
+    position: relative;
+    top: 0.77em;
+  }
+  main h1:before {
+    margin-right:15px;
+  }
+  main h1:after {
+    margin-left:15px;
+  }
+  
+  dl{
+    display: grid;
+    grid-template-rows:auto;
+    grid-template-columns:8em 1fr;
+    /*shorthand*/
+    grid-template: auto / 8em 1fr;
+    color: #024959;
+  }
+  
+  dt{
+    font-weight:800;
+    grid-column: 1;
+    padding: 10px 0 0 10px;
+    border-bottom:1px solid #026873;
+    background-color: #D9B2A9;
+  }
+  
+  dt:nth-of-type(odd) {
+    background: #026873;
+    color:#cef2e8;
+    border-bottom:1px solid #026873;
+  }
+  
+  dd{
+    margin:0;
+    grid-column: 2;
+    padding: 10px 0;
+    border-bottom:1px solid #026873;
+    background-color: #D9B2A9;
+  }
+  
+  dd:nth-of-type(odd) {
+    background: #026873;
+    color:#cef2e8;
+    border-bottom:1px solid #026873;
+  }
+  
+  .related-links{
+    display:flex;
+    justify-content:center;
+    list-style:none;
+    padding:0;
+  }
+  .related-links .svg-inline--fa{
+    font-size:1.8em;
+    padding-top:7px;
+  }
+  
+  .related-links a{
+    border:1px solid #D9B2A9;
+    border-radius: 100%;
+    padding:8px 16px;
+    text-align:center;
+    text-decoration:none;
+    color:#026873;
+    text-transform:uppercase;
+    font-size:.75em;
+    transition: background-color .5s ease;
+    color:#cef2e8;
+    background:#026873;
+  }
+  
+   
+  .related-links a:hover{
+      background:#cef2e8;
+     color:#026873;
+  }
+  
+  .related-links li{
+    margin-right:20px;
+  }
+  
+  .job, .certificate{
+    border-bottom:1px solid #999;
+    padding-bottom:20px;
+  }
+  
+  .job *[itemprop="jobTitle"], 
+  .job *[itemprop="name"], 
+  .job *[itemprop="url"], 
+  .job *[itemprop="addressLocality"],
+  .certificate *[itemprop="name"]
+  {
+    display:block;
+  }
+  
+  .job *[itemprop="url"] {
+    color: #024959;
+  }
+  
+  .job h3{
+    color: #026873;
+    margin:20px 0 0 0;
+  }
+  
+  .certificate h3{
+    color: #026873;
+    margin:20px 0 0 0;
+  }
+  
+  h2{color: #024959;
+  border-bottom: solid}
+  
+  footer{
+    color:#d9b2A9;
+    text-align:center;
+    padding:20px 0;
+  }
+  
+  main.container{
+    display: grid;
+    grid-template-areas:
+      "title"
+      "about"
+      "experience"
+      "education"
+      "skills";
+  }
+  
+  .page-title{
+    grid-area: title;
+  }
+  #about{
+    grid-area: about;
+  }
+  #skills{
+    grid-area: skills;
+  }
+  #experience{
+    grid-area: experience;
+  }
+  #education{
+    grid-area: education;
+  }
+  
+  
+  
+  /*----------------------Media Queries-----------------------*/
+  
+  @media screen and (min-width:768px){
+  
+    main.container {
+      max-width: 800px;
+      grid-template-columns: 36.5% 1fr;
+      grid-template-areas:
+        "title title"
+        "about about"
+        "skills experience"
+        "..... education";
+    }
+    
+   header.container{
+      max-width:800px;
+    }
+    
+    /*Nested Grid*/
+    #about{
+    display:grid;
+    grid-gap:10px;
+    grid-template-columns: 300px 90px auto;
+    grid-template-areas:
+      "bio bio details"
+      "bio bio related";
+  }
+  
+  .bio{
+    grid-area:bio;
+  }
+  
+  .details{
+    grid-area:details;
+    margin-top: 0;
+    padding-left: 10px;
+  }
+  
+  .related-links{
+    display:grid;
+    grid-template-columns: 1fr;
+    padding:20px 20px 0px 40px;
+    color:#026873;
+  }
+  
+  .related-links li{ font-family: "ff-cocon-pro", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  }
+  
+  @media only screen and (min-width: 992px){
+    main.container {
+      max-width:1000px;
+      grid-template-columns: 460px 480px;
+      display: grid;
+      grid-template-areas:
+        "title title"
+        "about about"
+        "skills experience"
+        ".... education";
+    }
+  
+    main{
+      padding: 1px 20px 1px 20px;
+    }
+    
+    header.container{
+      max-width:1000px;
+    }
+  
+    dd{
+      margin:0;
+      grid-column: 2;
+      padding: 20px;
+      border-bottom:1px solid #026873;
+      background-color: #D9B2A9;
+    }
+  
+    dt{
+      font-weight:800; 
+      grid-column: 1;
+      padding: 20px 0 0 20px;
+      border-bottom:1px solid #026873;
+      background-color: #D9B2A9;
+    }
+  
+    #about{
+      display:grid;
+      grid-gap:10px;
+      grid-template-columns: 460px 200px 290px;
+      grid-template-areas:
+        "details bio bio"
+        "related bio bio";
+    }
+  
+    img{padding: 0 20px 0 20px}
+  
+  }
