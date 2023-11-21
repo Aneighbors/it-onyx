@@ -7,9 +7,14 @@
 
 /* Add a gray background color and some padding to the footer */
 footer {
-  background-color: pink;
+  background-color: white;
   padding: 25px;
 }
+
+p.footer{
+    color: black;
+}
+
 body{
     background-color: black;
 }
@@ -30,4 +35,24 @@ a{
 a:hover{
     color:black;
     background-color: white;
+}
+
+p{
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+img.pro{
+    width:30%;
+    float:left;
+    padding-right: 30px;
+}
+
+ /*----------------------Media Queries-----------------------*/
+  
+ @media screen and (max-width:768px){
+  
+    img.pro{
+        width:40%
+    }
 }
