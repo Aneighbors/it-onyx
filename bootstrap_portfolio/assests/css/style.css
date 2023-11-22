@@ -45,15 +45,12 @@ p{
 img.pro{
     width:30%;
     float:left;
-    padding-right: 30px;
+    margin-right: 20px;
 }
 
-
- /*----------------------Media Queries-----------------------*/
-  
- @media screen and (max-width:768px){
-  
-    img.pro{
-        width:40%
-    }
+.cover{
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: white;
+    color:black;
 }

@@ -85,7 +85,7 @@ html {
   
   nav{
     display:grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     padding:20px 20px 0px 20px;
     color:#026873;
   }
@@ -320,7 +320,6 @@ html {
   .related-links li{ font-family: "ff-cocon-pro", sans-serif;
     font-weight: 700;
     font-style: normal;
-    display: block;
   }
   
   }
@@ -373,5 +372,3 @@ html {
     img{padding: 0 20px 0 20px}
   
   }
-
-  
