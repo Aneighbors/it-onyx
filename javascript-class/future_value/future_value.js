@@ -34,6 +34,7 @@ const calculateFV = (investment, rate, years) => {
    }
  }
  */
+
  document.addEventListener("DOMContentLoaded", () => {
     $("#calculate").addEventListener("click", () => {
         const investment = parseFloat($("#investment").value);
