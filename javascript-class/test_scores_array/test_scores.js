@@ -6,7 +6,6 @@ let highestScore = 0;
 // use do-while loop to get the scores from the user
 let score = 0;
 
-
 do {
     score = parseInt(
         prompt("Enter a test score, or enter -1 to end scores", -1));

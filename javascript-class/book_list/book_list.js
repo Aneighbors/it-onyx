@@ -2,6 +2,8 @@
 
 $(document).ready( () =>{
  
+    $("#startup_message"). fadeOut(5000) .slideDown(1000);
+
     $("#categories a").each( (index, link) => {
       const image = new Image();
       image.src= link.href;
