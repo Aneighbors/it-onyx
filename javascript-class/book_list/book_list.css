@@ -32,10 +32,6 @@ h2.minus {
 	background: url(images/minus.png) no-repeat left center;
 }
 
-img.minus{
-display: non;
-}
-
 div {
 	display: none;
 }

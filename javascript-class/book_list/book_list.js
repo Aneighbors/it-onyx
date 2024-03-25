@@ -2,20 +2,6 @@
 
 $(document).ready( () =>{
  
-    $("#startup_message"). fadeOut(5000) .slideDown(1000);
-
-    $("#categories a").each( (index, link) => {
-      const image = new Image();
-      image.src= link.href;
-    });
-
-    $("#categories a").click (evt => {
-        const link = evt.currentTarget;
-
-        $("#image").attr("src", link.href);
-
-        evt.preventDefault();
-    })
 
     $("#categories h2").click( evt => {
         const h2 = evt.currentTarget;
@@ -27,10 +13,23 @@ $(document).ready( () =>{
         else{
             $(h2).next().show();
         }
+        
+        $("#image").attr("src", "");
 
         evt.preventDefault();
     });
 
-
-
+    $("#categories a").each( (index, link) => {
+        const image = new Image();
+        image.src= link.href;
+      
+  
+      $("#categories a").click (evt => {
+          const link = evt.currentTarget;
+  
+          $("#image").attr("src", link.href);
+  
+          evt.preventDefault();
+      })
+    });
 });
