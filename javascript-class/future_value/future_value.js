@@ -1,62 +1,117 @@
 "use strict";
 
-const $ = selector => document.querySelector(selector);
+const getRandomNumber = max => {
+    let rand = null;
+    if (!isNaN(max)) {
+        rand = Math.random();
+        rand = Math.floor(rand * max);
+        rand = rand + 1;
+    }
+    return rand;
+};
 
-const calculateFV = (investment, rate, years) => {
+const calculateFutureValue = (investment, rate, years) => {
     let futureValue = investment;
     for (let i = 1; i <= years; i++ ) {
         futureValue += futureValue * rate / 100;
+        if (futureValue == Infinity) {
+            alert ("Future Value =" + futureValue + "\n i = " + i);
+            i = years;
+        }
     }
-    futureValue = futureValue.toFixed(2);
-    return futureValue;
+    // alert ("The maximum value for a JavaScript numer is \n" + Number.MAX_VALUE);
+    return futureValue.toFixed(2);
 };
 
- /*const processEntries = () => {
-    const investment = parseFloat($("#investment").value);
-    const rate = parseFloat($("#rate").value);
-    const years = parseInt($("#years").value);
-    let errorMessage = "";
+const formatFutureValue = futureValue => {
+    const dotLocation = futureValue.indexOf(".");
+    const cents = futureValue.substring(dotLocation + 1, dotLocation + 3);
+    const hundreds = futureValue.substring(dotLocation - 3, dotLocation);
+    const thousands = "";
+    const millions = "";
+    if (dotLocation < 6) {
+        thousands = futureValue.substring(0, dotLocation - 3);
+        millions = "";
+    }
+    else {
+        thousands = futureValue.substring(dotLocation - 6, dotLocation - 3);
+        millions = futureValue.substring(0, dotLocation - 6);
+    }
+    let futureValueFormatted = "";
+    if (dotLocation >= 7) {
+        futureValueFormatted = "$" + millions + "," + thousands + "," + hundreds + "." + cents;
+    }
+    else {
+        futureValueFormatted = "$" + thousands + "," + hundreds + "." + cents;
+    }
+    return futureValueFormatted;
+};
 
-   if (isNaN(investment) || investment <= 0 || investment > 100000) {
-        errorMessage = "Investment is a number that's greater than zero and less than or equal to 100,000";
-         $("#investment").focus();
-    } else if (isNaN(rate) || rate <= 0 || rate > 15) {
-       errorMessage = "Interest rate is a number that's greater than zero and less than or equal to 15";
-        $("#rate").focus();
-   } else if (isNaN(years) || years <= 0 || years > 50) {
-       errorMessage = "Years is a number that's greater than zero and less than or equal to 50";
-      $("#years").focus();
-   }
- if (errorMessage == "") {
-         $("#future_value").value = calculateFV(investment, rate, years);        
-     } else {
-         alert(errorMessage);
-   }
- }
- */
+const getDate = futureValue => {
+    const currentDate = new Date();
 
- document.addEventListener("DOMContentLoaded", () => {
-    $("#calculate").addEventListener("click", () => {
-        const investment = parseFloat($("#investment").value);
-        const rate = parseFloat($("#rate").value);
-        const years = parseInt($("#years").value);
-        let errorMessage = "";
+    let month = currentDate.getMonth() + 1;
+    if (month < 10) {
+        month = "0" + month;
+    }
+    let day = currentDate.getDate();
+    if (day < 10) {
+        day = "0" + day;
+    }
+    const year = currentDate.getFullYear();
     
-        if (isNaN(investment) || investment <= 0 || investment > 100000) {
-            errorMessage = "Investment is a number that's greater than zero and less than or equal to 100,000";
-            $("#investment").focus();
-        } else if (isNaN(rate) || rate <= 0 || rate > 15) {
-            errorMessage = "Interest rate is a number that's greater than zero and less than or equal to 15";
-            $("#rate").focus();
-        } else if (isNaN(years) || years <= 0 || years > 50) {
-            errorMessage = "Years is a number that's greater than zero and less than or equal to 50";
-            $("#years").focus();
-        }
-        if (errorMessage == "") {
-            $("#future_value").value = calculateFV(investment, rate, years);        
+    const hours = currentDate.getHours();
+    let minutes = currentDate.getMinutes();
+    if (minutes < 10) {
+        minutes = "0" + minutes;
+    }
+    const dateString = `Today is ${month}/${day}/${year} at ${hours}:${minutes}.`;	
+    return dateString;    
+}
+
+$(document).ready( () => {
+    $("#calculate").click( () => {
+        // const investment = parseFloat($("#investment").val());
+        // const rate = parseFloat($("#rate").val());
+        // const years = parseFloat($("#years").val());
+
+        const investment = getRandomNumber(50000);
+		$("#investment").val(investment);
+		const rate = getRandomNumber(15);
+		$("#rate").val(rate);
+		const years = getRandomNumber(50);
+        $("#years").val(years);
+        
+        let isValid = true;
+        if (isNaN(investment) || investment <= 0) {
+            $("#investment").next().text("Must be a valid number greater than 0.");
+            isValid = false;
         } else {
-            alert(errorMessage);
+            $("#investment").next().text("");
+        }
+
+        if (isNaN(rate) || rate <= 0) {
+            $("#rate").next().text("Must be a valid number greater than 0.");
+            isValid = false;
+        } else {
+            $("#rate").next().text("");
+        }
+
+        if (isNaN(years) || years <= 0) {
+            $("#years").next().text("Must be a valid number greater than 0.");
+            isValid = false;
+        } else {
+            $("#years").next().text("");
+        }
+
+        if (isValid) {
+            const futureValue = calculateFutureValue(investment, rate, years);
+            // $("#future_value").val(formatFutureValue(futureValue));
+            const usCurrency = new Intl.NumberFormat("en-us", {style:"currency", currency:"USD"});
+            $("#future_value").val(usCurrency.format(futureValue));
+
         }
     });
+    $("#date").text(getDate());
     $("#investment").focus();
 });
